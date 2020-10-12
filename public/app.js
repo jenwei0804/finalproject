@@ -7,14 +7,17 @@ function renderStudents(doc){
     let td1 = document.createElement("td");
     let td2 = document.createElement("td");
     let td3 = document.createElement("td");
+    let td4 = document.createElement("td");
     let tr = document.createElement("tr");
     tr.setAttribute('data-id', doc.id);
     td1.textContent = doc.data().name;
     td2.textContent = doc.data().age;
     td3.textContent = doc.data().gender;
+    td4.textContent = doc.data().area;
     tr.appendChild(td1);
     tr.appendChild(td2);
     tr.appendChild(td3);
+    tr.appendChild(td4);
     
     // delete 
     let cross = document.createElement('div');
@@ -45,10 +48,12 @@ form.addEventListener('submit', (e) => {
     db.collection('ClassA').add({
         name: form.name.value,
         gender: form.gender.value,
-        age: form.age.value
+        age: form.age.value,
+        area: form.area.value
     });
     form.name.value = '';
     form.gender.value = '';
     form.age.value = '';
+    form.area.value = '';
 });
 //
