@@ -9,12 +9,12 @@ router.use(function timeLog(req, res, next) {
 // define the home page route
 
 router.get('/', function(req, res) {
-  res.send('Bob\'s home page');
+  res.send('GOODhospital\'s home page');
 });
 
 // define the about route
 router.get('/about', function(req, res) {
-  res.send('About Bob');
+  res.send('About GOODhospital');
 });
 
 module.exports = router;
